@@ -1,0 +1,117 @@
+.hero {
+  height: 955px;
+  background: url("/img/hero_background.webp");
+}
+
+.hero__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 9vw;
+}
+
+.hero__img {
+  height: 56px;
+  width: 152px;
+}
+
+.hero__hamburger {
+  display: block;
+  margin-top: 80px;
+  order: -1;
+  cursor: pointer;
+}
+
+.hero__hamburger-line {
+  display: block;
+  width: 40px;
+  height: 4px;
+  background-color: $color-secondary;
+  margin-bottom: 5px;
+}
+
+@include breakpoint-down(normal) {
+  .hero__hamburger-container {
+    background: rgba(20, 29, 88, 0.8);
+    box-shadow: 0 0 6rem #58bae4;
+    display: block;
+    height: 65vh;
+    margin: 0 auto;
+    margin-top: 8rem;
+    width: 80vw;
+  }
+
+  .hero__nav {
+    flex-direction: column;
+  }
+
+  a > .list__item {
+    font-size: 3rem;
+    line-height: 2;
+    text-shadow: 0 0 4px #39a110;
+  }
+}
+
+@include breakpoint-down(medium) {
+  .hero__img {
+    height: 47px;
+    width: 130px;
+  }
+
+  .hero__nav {
+    gap: 5vw;
+    text-align: center;
+  }
+
+  .list__item {
+    font-size: 1.7rem;
+  }
+}
+
+@include breakpoint-down(large) {
+  .hero__circle {
+    height: 43rem;
+    width: 44rem;
+    top: 21rem;
+    right: 7vw;
+  }
+}
+
+@include breakpoint-up(normal) {
+  .list {
+    display: flex;
+  }
+
+  .list a {
+    margin-right: 23px;
+  }
+
+  .list__item-secondary {
+    color: $color-secondary;
+  }
+
+  .list__item::after {
+    content: "|";
+    margin-left: 11px;
+  }
+
+  .hero__hamburger {
+    display: none;
+  }
+
+  .hero__circle {
+    background: url(/img/background-circle.webp);
+    display: flex;
+    background-size: contain;
+    background-position: bottom;
+    padding-top: 3rem;
+    position: absolute;
+    background-repeat: no-repeat;
+    height: 46rem;
+    width: 47rem;
+    top: 21rem;
+    right: 14vw;
+    justify-content: center;
+  }
+}
