@@ -20,6 +20,7 @@ body {
   overflow: hidden;
   box-sizing: border-box;
   color: white;
+  font-family: "Lato";
 }
 
 *,
@@ -41,7 +42,8 @@ h1 {
   }
 }
 h2 {
-  font-size: 3.5rem;
+  font-size: 4rem;
+  margin-top: 2rem;
 }
 
 h3 {
@@ -67,6 +69,21 @@ li {
   color: #40bcb2;
 }
 
+.green-thick {
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+@media (min-width: 87.5em) {
+  h2 {
+    font-size: 5.5rem;
+  }
+  .green-thick {
+    font-size: 3rem;
+  }
+}
 /*        END Typography        */
 /*        START BLOCK       */
 .container {
@@ -87,7 +104,7 @@ li {
   }
 }
 /*    END VISIBILITY    */
-#background {
+.background {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -231,7 +248,7 @@ button {
 
 .hero {
   height: 955px;
-  background: url("/img/hero_background.webp");
+  background-image: url("/img/hero_background.webp");
 }
 
 .hero__nav {
@@ -333,4 +350,16 @@ button {
     right: 14vw;
     justify-content: center;
   }
+}
+.who-1 {
+  display: flex;
+  width: 100%;
+}
+
+.who {
+  display: flex;
+  height: 878px;
+  width: 100%;
+  background: url("/img/who_background.png");
+  background-position: center;
 }/*# sourceMappingURL=styles.css.map */
