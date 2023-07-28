@@ -1,12 +1,76 @@
-.who-1 {
-  display: flex;
-  width: 100%;
-}
-
 .who {
-  display: flex;
-  height: 878px;
+  // height: 878px;
   width: 100%;
   background: url("/img/who_background.png");
   background-position: center;
+}
+
+.who__heading h2 {
+  margin-top: 1rem;
+}
+
+.who__heading .green-thick {
+  font-size: 3rem;
+}
+
+.who__header {
+  padding-top: 1rem;
+}
+
+// .who__header-first {
+// }
+
+.who__header-second {
+  // TODO:check if not only below 850px
+  padding-left: 2rem;
+}
+
+.who__header-second li::before {
+  content: "";
+  background-image: url("/img/list__img-green.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 8px;
+  display: inline-block;
+  transform: translateY(3px);
+  height: 17px;
+  width: 17px;
+}
+
+.who__list li:first-of-type {
+  margin-top: 0;
+}
+
+.who__buttons {
+  margin: 3rem auto;
+}
+
+.who__buttons > :not(:last-child) {
+  margin-right: 50px;
+}
+
+@include breakpoint-up(normal) {
+  .who__header .who__facts {
+    margin-top: 0;
+  }
+
+  .who__header .who__we {
+    font-size: 3.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .who__header-second h3 {
+    text-align: left;
+  }
+}
+
+@include breakpoint-up(large) {
+  .who__heading .green-thick {
+    font-size: 4rem;
+  }
+
+  .who__header-second .green-thick {
+    font-size: 2rem;
+  }
 }
