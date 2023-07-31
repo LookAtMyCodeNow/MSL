@@ -10,6 +10,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 img {
@@ -37,7 +38,7 @@ h1 {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 5rem;
   margin-top: 2rem;
 }
 
@@ -54,6 +55,7 @@ h3 {
 
 p {
   font-size: 1.4rem;
+  margin-top: 2rem;
 }
 
 a {
@@ -77,26 +79,30 @@ li {
   font-size: 2.5rem;
   text-align: center;
   margin: 0 auto;
-  margin-top: 3rem;
   max-width: 33ch;
 }
 
 .text {
   font-size: 2rem;
-  margin-top: 2rem;
+  letter-spacing: 1px;
+  text-align: center;
 }
 
-@media (min-width: 52.9375em) {
-  .green-thick {
-    margin-top: 5rem;
-  }
+.text-thick {
+  font-size: 2.3rem;
+  font-weight: 400;
+  margin-top: 4rem;
 }
+
 @media (min-width: 64em) {
   h1 {
     font-size: 5.7rem;
   }
   h2 {
     font-size: 5.5rem;
+  }
+  .text-thick {
+    font-size: 2.5rem;
   }
 }
 @media (min-width: 87.5em) {
@@ -109,7 +115,6 @@ li {
 /* START Containers  */
 .container {
   max-width: 1000px;
-  padding: 0 5rem;
   margin: 0 auto;
 }
 
@@ -118,6 +123,11 @@ li {
   justify-content: center;
 }
 
+@media (max-width: 87.4375em) {
+  .container {
+    padding: 0 5rem;
+  }
+}
 /*  END CONTAINERS **/
 /*        END BLOCK     */
 /*    START VISIBILITY    */
@@ -142,6 +152,7 @@ li {
 
 .grid {
   display: grid;
+  gap: 20px;
 }
 
 @media (min-width: 52.9375em) {
@@ -151,6 +162,13 @@ li {
 }
 .m-top {
   margin-top: 2rem;
+}
+
+.who {
+  width: 100%;
+  background: url("/img/who_background.png");
+  background-position: center;
+  padding: 5rem 0;
 }
 
 /*    END VISIBILITY    */
@@ -407,12 +425,6 @@ button:hover {
     justify-content: center;
   }
 }
-.who {
-  width: 100%;
-  background: url("/img/who_background.png");
-  background-position: center;
-}
-
 .who__heading h2 {
   margin-top: 1rem;
 }
@@ -422,7 +434,7 @@ button:hover {
 }
 
 .who__header {
-  padding-top: 1rem;
+  margin-top: 3rem;
 }
 
 .who__header-second {
@@ -466,11 +478,6 @@ button:hover {
     text-align: left;
   }
 }
-@media (min-width: 64em) {
-  .who__heading .green-thick {
-    font-size: 4rem;
-  }
-  .who__header-second .green-thick {
-    font-size: 2rem;
-  }
+.who-2 {
+  overflow-x: hidden;
 }/*# sourceMappingURL=styles.css.map */

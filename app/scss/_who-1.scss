@@ -1,10 +1,3 @@
-.who {
-  // height: 878px;
-  width: 100%;
-  background: url("/img/who_background.png");
-  background-position: center;
-}
-
 .who__heading h2 {
   margin-top: 1rem;
 }
@@ -14,7 +7,7 @@
 }
 
 .who__header {
-  padding-top: 1rem;
+  margin-top: 3rem;
 }
 
 // .who__header-first {
@@ -62,15 +55,5 @@
 
   .who__header-second h3 {
     text-align: left;
-  }
-}
-
-@include breakpoint-up(large) {
-  .who__heading .green-thick {
-    font-size: 4rem;
-  }
-
-  .who__header-second .green-thick {
-    font-size: 2rem;
   }
 }
