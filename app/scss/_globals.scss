@@ -90,11 +90,18 @@ li {
   text-align: center;
 }
 
+@include breakpoint-up(normal) {
+  .text {
+    text-align: left;
+  }
+}
+
 // TODO:// There was font-size: 2rem, but I changed for 2.5. Check if not make any mistackes in a future,
 .text-thick {
   font-size: 2.3rem;
   font-weight: 400;
   margin-top: 4rem;
+  text-align: center;
 }
 
 @include breakpoint-up(large) {
@@ -184,6 +191,9 @@ li {
 .grid {
   display: grid;
   gap: 20px;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
 }
 
 @include breakpoint-up(normal) {
@@ -194,9 +204,14 @@ li {
 
 .grid--4x2 {
   grid-template-columns: repeat(auto-fit, minmax(134px, 25vw));
-  grid-template-rows: repeat(4, minmax(150px, 1fr));
-  justify-content: center;
+  grid-template-rows: repeat(2, minmax(150px, 1fr));
   grid-row-gap: 10px;
+}
+
+@include breakpoint-down(medium) {
+  .what .grid--5x2 {
+    gap: 7px;
+  }
 }
 
 @include breakpoint-up(large) {
@@ -206,13 +221,28 @@ li {
   }
 }
 
+.grid--5x2 {
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  margin-top: 3rem;
+}
+
+@include breakpoint-up(normal) {
+  .grid--5x2 {
+    grid-template-columns: repeat(5, minmax(134px, 16vw));
+    grid-template-rows: repeat(2, minmax(134px, 1fr));
+    gap: 30px;
+  }
+}
+
 .m-top {
   margin-top: 2rem;
 }
 
 .who {
   width: 100%;
-  background-image: url("/img/who_background.png");
+  background-image: url("/img/who_background.webp");
 }
 
 /*    END VISIBILITY    */
@@ -371,6 +401,7 @@ button {
 
 button:hover {
   transform: scale(1.1);
+  // TODO:make it linear gradient from green to blue for better contrast
   background-color: lighten($color-accent, 20%);
   filter: contrast(200%);
 }
