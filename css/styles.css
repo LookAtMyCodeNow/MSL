@@ -116,6 +116,7 @@ li {
 .container {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 5rem 2rem;
 }
 
 .flex-center {
@@ -125,9 +126,15 @@ li {
   align-items: center;
 }
 
-@media (max-width: 87.4375em) {
+@media (min-width: 52.9375em) {
+  .who__buttons.flex-center {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+@media (min-width: 64em) {
   .container {
-    padding: 0 5rem;
+    padding: 5rem 0;
   }
 }
 /*  END CONTAINERS **/
@@ -145,7 +152,7 @@ li {
 }
 .background {
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   overflow-x: hidden;
   width: 100%;
@@ -181,9 +188,7 @@ li {
 
 .who {
   width: 100%;
-  background: url("/img/who_background.png");
-  background-position: center;
-  padding: 5rem 0;
+  background-image: url("/img/who_background.png");
 }
 
 /*    END VISIBILITY    */
@@ -314,9 +319,9 @@ textarea {
   }
 }
 button {
-  font-size: 2rem;
-  padding: 1rem 4rem;
-  margin-top: 3rem 0;
+  font-size: 3rem;
+  padding: 1rem 6rem;
+  margin-top: 3rem;
   background-color: #171f52;
   border: 1px solid #fff;
   color: #ffffff;
@@ -330,12 +335,6 @@ button:hover {
   filter: contrast(200%);
 }
 
-@media (min-width: 40em) {
-  button {
-    font-size: 3rem;
-    padding: 1rem 6rem;
-  }
-}
 .hero {
   background-image: url("/img/hero_background.webp");
 }
@@ -440,20 +439,13 @@ button:hover {
     justify-content: center;
   }
 }
+/*  Start Slider-1  */
 .who__heading h2 {
   margin-top: 1rem;
 }
 
-.who__heading .green-thick {
-  font-size: 3rem;
-}
-
 .who__header {
   margin-top: 3rem;
-}
-
-.who__header-second {
-  padding-left: 2rem;
 }
 
 .who__header-second li::before {
@@ -474,11 +466,11 @@ button:hover {
 }
 
 .who__buttons {
-  margin: 3rem auto;
+  margin: 0 auto;
 }
 
-.who__buttons > :not(:last-child) {
-  margin-right: 50px;
+.who__buttons .btn {
+  width: 240px;
 }
 
 @media (min-width: 52.9375em) {
@@ -488,15 +480,21 @@ button:hover {
   .who__header .who__we {
     font-size: 3.5rem;
     padding-right: 1.5rem;
+    transform: translateY(50px);
   }
   .who__header-second h3 {
     text-align: left;
   }
 }
-.who-2 {
-  overflow-x: hidden;
+@media (min-width: 87.5em) {
+  .who__list .green-thick {
+    font-size: 2.5rem;
+  }
 }
-
+/*    End Slider-1    */
+/*    Start Slider-2  */
+/*    End Slider-2    */
+/*    Start Slider-3    */
 .who__awards {
   margin-top: 4rem;
   width: 70vw;
@@ -509,4 +507,6 @@ button:hover {
 .award:hover {
   transform: scale(1.05) rotate3d(1, 1, 1, 360deg);
   filter: drop-shadow(0 0 15px rgb(26, 45, 219)) invert(5%);
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*    End Slider-3    *//*# sourceMappingURL=styles.css.map */
