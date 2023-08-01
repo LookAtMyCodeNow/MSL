@@ -1,3 +1,5 @@
+/*   Start Slider 1 */
+
 .what {
   background-image: url("/img/what__background.webp");
 }
@@ -23,3 +25,21 @@
   content: "|";
   margin-left: 10px;
 }
+
+/*  End Slider 2   */
+
+.what__metods p {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.what__metods p:first-of-type {
+  padding: 0 10rem;
+  margin-top: 6rem;
+}
+
+.what__metods-header {
+  line-height: 1.1;
+}
+
+/*  Start Slider 2  */

@@ -389,8 +389,10 @@ textarea {
 }
 
 button {
+  display: flex;
   font-size: 3rem;
   padding: 1rem 6rem;
+  margin: 0 auto;
   margin-top: 3rem;
   background-color: $color-accent;
   border: 1px solid $white;
@@ -402,6 +404,6 @@ button {
 button:hover {
   transform: scale(1.1);
   // TODO:make it linear gradient from green to blue for better contrast
-  background-color: lighten($color-accent, 20%);
+  background: linear-gradient(to top right, $color-accent, $color-secondary);
   filter: contrast(200%);
 }

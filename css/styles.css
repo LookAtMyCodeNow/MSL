@@ -346,8 +346,10 @@ textarea {
   }
 }
 button {
+  display: flex;
   font-size: 3rem;
   padding: 1rem 6rem;
+  margin: 0 auto;
   margin-top: 3rem;
   background-color: #171f52;
   border: 1px solid #fff;
@@ -358,7 +360,7 @@ button {
 
 button:hover {
   transform: scale(1.1);
-  background-color: #2d3da2;
+  background: linear-gradient(to top right, #171f52, #40bcb2);
   filter: contrast(200%);
 }
 
@@ -537,6 +539,7 @@ button:hover {
 }
 
 /*    End Slider-3    */
+/*   Start Slider 1 */
 .what {
   background-image: url("/img/what__background.webp");
 }
@@ -561,4 +564,21 @@ button:hover {
 .what__footer-item::after {
   content: "|";
   margin-left: 10px;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*  End Slider 2   */
+.what__metods p {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.what__metods p:first-of-type {
+  padding: 0 10rem;
+  margin-top: 6rem;
+}
+
+.what__metods-header {
+  line-height: 1.1;
+}
+
+/*  Start Slider 2  *//*# sourceMappingURL=styles.css.map */
