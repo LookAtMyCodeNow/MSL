@@ -1,0 +1,28 @@
+.story {
+  background-image: url("/img/story__background.webp");
+}
+
+.story__ceo {
+  margin: 0 auto;
+}
+
+.story__ceo h3 {
+  text-align: left;
+  margin: 0;
+}
+
+.story__img-focused,
+.story__person {
+  max-width: 240px;
+  object-fit: contain;
+}
+
+.story__persons {
+  grid-template-columns: repeat(3, 140px);
+}
+
+@include breakpoint-up(large) {
+  .story__persons {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

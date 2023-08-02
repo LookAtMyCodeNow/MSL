@@ -54,7 +54,7 @@ h3 {
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-top: 2rem;
 }
 
@@ -100,6 +100,10 @@ li {
   text-align: center;
 }
 
+.text-cent {
+  text-align: center;
+}
+
 @media (min-width: 64em) {
   h1 {
     font-size: 5.7rem;
@@ -125,11 +129,19 @@ li {
   padding: 5rem 2rem;
 }
 
+.pad-vert {
+  padding: 0 2rem;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 @media (min-width: 52.9375em) {
@@ -581,4 +593,32 @@ button:hover {
   line-height: 1.1;
 }
 
-/*  Start Slider 2  *//*# sourceMappingURL=styles.css.map */
+/*  Start Slider 2  */
+.story {
+  background-image: url("/img/story__background.webp");
+}
+
+.story__ceo {
+  margin: 0 auto;
+}
+
+.story__ceo h3 {
+  text-align: left;
+  margin: 0;
+}
+
+.story__img-focused,
+.story__person {
+  max-width: 240px;
+  object-fit: contain;
+}
+
+.story__persons {
+  grid-template-columns: repeat(3, 140px);
+}
+
+@media (min-width: 64em) {
+  .story__persons {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}/*# sourceMappingURL=styles.css.map */
