@@ -731,4 +731,20 @@ button:hover {
   .contact__benefit.grid {
     align-items: start;
   }
+}
+.contact-3 p {
+  font-size: 2rem;
+}
+
+.contact-3 .contact__staz {
+  font-size: 5rem;
+}
+
+@media (min-width: 52.9375em) {
+  .contact-3 p {
+    font-size: 2.5rem;
+  }
+  .contact-3 .container {
+    padding: 5rem 3rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
