@@ -1,0 +1,91 @@
+// Start Slider 1
+
+.contact {
+  // TODO: check later if dont I want to use this background
+  // background-color: #ee5522;
+  // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23d23d09' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+
+  background-color: #f29e03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='46' height='46' fill-opacity='0.6' fill='%23ffa61d'/%3E%3C/svg%3E");
+}
+
+.contact h3 {
+  color: lighten($color: $color-accent, $amount: 20%);
+}
+
+.contact__carier {
+  color: black !important;
+}
+
+.contact__main {
+  justify-content: space-around;
+}
+
+.contact__details {
+  gap: 5rem;
+}
+
+.contact__map {
+  height: 600px;
+  width: 100%;
+  background-color: red;
+}
+
+.contact__icon {
+  width: 160px;
+  height: 70px;
+}
+
+.contact__info {
+  color: $color-accent;
+}
+
+.contact__info i {
+  font-size: 30px;
+  margin-right: 4rem;
+}
+
+.contact__info i:not(:last-of-type) {
+  margin-right: 2rem;
+}
+
+@include breakpoint-up(normal) {
+  .contact__info-item {
+    font-size: 2rem;
+  }
+
+  .contact__icon {
+    width: 200px;
+    height: 80px;
+  }
+
+  .contact__info i {
+    font-size: 40px;
+  }
+}
+
+// End Slider 1
+
+// Start Slider 2
+
+.contact__work {
+  color: lighten($color: $color-accent, $amount: 20%);
+}
+
+@include breakpoint-up(normal) {
+  .ul__list li::before,
+  .contact__practice p::before {
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #85ffbd;
+    background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+  }
+
+  .contact__benefit.grid {
+    align-items: start;
+  }
+}

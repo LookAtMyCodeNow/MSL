@@ -82,6 +82,21 @@ li {
   max-width: 33ch;
 }
 
+.green-gradient {
+  background: -webkit-linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.black {
+  color: #000;
+}
+
+.red {
+  color: #d80d0d;
+}
+
 .text {
   font-size: 2rem;
   letter-spacing: 1px;
@@ -155,6 +170,11 @@ li {
     padding: 5rem 0;
   }
 }
+@media (max-width: 63.9375em) {
+  .contact__main.flex-row {
+    flex-direction: column;
+  }
+}
 /*  END CONTAINERS **/
 /*        END BLOCK     */
 /*    START VISIBILITY    */
@@ -225,9 +245,17 @@ li {
   margin-top: 2rem;
 }
 
+.m-top-big {
+  margin-top: 6rem;
+}
+
 .who {
   width: 100%;
   background-image: url("/img/who_background.webp");
+}
+
+.ul__list li {
+  line-height: 1.5;
 }
 
 /*    END VISIBILITY    */
@@ -364,10 +392,15 @@ button {
   margin: 0 auto;
   margin-top: 3rem;
   background-color: #171f52;
-  border: 1px solid #fff;
+  border-radius: 3rem;
   color: #ffffff;
   cursor: pointer;
   transition: all 0.3s;
+  white-space: nowrap;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 800'%3E%3Cg %3E%3Ccircle fill='%23000000' cx='400' cy='400' r='600'/%3E%3Ccircle fill='%23230046' cx='400' cy='400' r='500'/%3E%3Ccircle fill='%232f0052' cx='400' cy='400' r='400'/%3E%3Ccircle fill='%233b075e' cx='400' cy='400' r='300'/%3E%3Ccircle fill='%2348156a' cx='400' cy='400' r='200'/%3E%3Ccircle fill='%23552277' cx='400' cy='400' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 button:hover {
@@ -620,5 +653,82 @@ button:hover {
 @media (min-width: 64em) {
   .story__persons {
     grid-template-columns: repeat(6, 1fr);
+  }
+}
+.contact {
+  background-color: #f29e03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='46' height='46' fill-opacity='0.6' fill='%23ffa61d'/%3E%3C/svg%3E");
+}
+
+.contact h3 {
+  color: #2d3da2;
+}
+
+.contact__carier {
+  color: black !important;
+}
+
+.contact__main {
+  justify-content: space-around;
+}
+
+.contact__details {
+  gap: 5rem;
+}
+
+.contact__map {
+  height: 600px;
+  width: 100%;
+  background-color: red;
+}
+
+.contact__icon {
+  width: 160px;
+  height: 70px;
+}
+
+.contact__info {
+  color: #171f52;
+}
+
+.contact__info i {
+  font-size: 30px;
+  margin-right: 4rem;
+}
+
+.contact__info i:not(:last-of-type) {
+  margin-right: 2rem;
+}
+
+@media (min-width: 52.9375em) {
+  .contact__info-item {
+    font-size: 2rem;
+  }
+  .contact__icon {
+    width: 200px;
+    height: 80px;
+  }
+  .contact__info i {
+    font-size: 40px;
+  }
+}
+.contact__work {
+  color: #2d3da2;
+}
+
+@media (min-width: 52.9375em) {
+  .ul__list li::before,
+  .contact__practice p::before {
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #85ffbd;
+    background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+  }
+  .contact__benefit.grid {
+    align-items: start;
   }
 }/*# sourceMappingURL=styles.css.map */

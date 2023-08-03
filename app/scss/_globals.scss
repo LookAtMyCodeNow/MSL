@@ -84,6 +84,21 @@ li {
   max-width: 33ch;
 }
 
+.green-gradient {
+  background: -webkit-linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.black {
+  color: $black;
+}
+
+.red {
+  color: $color-red;
+}
+
 .text {
   font-size: 2rem;
   letter-spacing: 1px;
@@ -164,6 +179,12 @@ li {
 @include breakpoint-up(large) {
   .container {
     padding: 5rem 0;
+  }
+}
+
+@include breakpoint-down(medium) {
+  .contact__main.flex-row {
+    flex-direction: column;
   }
 }
 
@@ -252,9 +273,17 @@ li {
   margin-top: 2rem;
 }
 
+.m-top-big {
+  margin-top: 6rem;
+}
+
 .who {
   width: 100%;
   background-image: url("/img/who_background.webp");
+}
+
+.ul__list li {
+  line-height: 1.5;
 }
 
 /*    END VISIBILITY    */
@@ -407,10 +436,15 @@ button {
   margin: 0 auto;
   margin-top: 3rem;
   background-color: $color-accent;
-  border: 1px solid $white;
+  border-radius: 3rem;
   color: #ffffff;
   cursor: pointer;
   transition: all 0.3s;
+  white-space: nowrap;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 800'%3E%3Cg %3E%3Ccircle fill='%23000000' cx='400' cy='400' r='600'/%3E%3Ccircle fill='%23230046' cx='400' cy='400' r='500'/%3E%3Ccircle fill='%232f0052' cx='400' cy='400' r='400'/%3E%3Ccircle fill='%233b075e' cx='400' cy='400' r='300'/%3E%3Ccircle fill='%2348156a' cx='400' cy='400' r='200'/%3E%3Ccircle fill='%23552277' cx='400' cy='400' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 button:hover {
