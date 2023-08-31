@@ -1,13 +1,11 @@
 .hero {
-  // The height property it's not neccessary
-  // height: 955px;
-  background-image: url("/img/hero_background.webp");
+  background-image: url("../img/story__background.webp");
+  max-height: 100%;
 }
 
 .hero__nav {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-top: 3rem;
   gap: 9vw;
 }
@@ -17,9 +15,16 @@
   width: 152px;
 }
 
+.list__item:hover,
+.hero__img:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+  color: #5fc0ea;
+  font-weight: 800;
+}
+
 .hero__hamburger {
   display: block;
-  margin-top: 80px;
   order: -1;
   cursor: pointer;
 }
@@ -37,7 +42,6 @@
     background: rgba(20, 29, 88, 0.8);
     box-shadow: 0 0 6rem #58bae4;
     display: block;
-    height: 65vh;
     margin: 0 auto;
     margin-top: 8rem;
     width: 80vw;
@@ -45,6 +49,7 @@
 
   .hero__nav {
     flex-direction: column;
+    align-items: center;
   }
 
   a > .list__item {
@@ -63,6 +68,7 @@
   .hero__nav {
     gap: 5vw;
     text-align: center;
+    margin-bottom: 10rem;
   }
 
   .list__item {
@@ -102,7 +108,15 @@
   }
 
   .hero__circle {
-    background: url(/img/background-circle.webp);
+    background: linear-gradient(
+      to right top,
+      #051937,
+      #004d7a,
+      #008793,
+      #00bf72,
+      #a8eb12
+    );
+    border-radius: 50%;
     display: flex;
     background-size: contain;
     background-position: bottom;

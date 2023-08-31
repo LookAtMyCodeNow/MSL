@@ -1,5 +1,11 @@
 /*  Start Slider-1  */
 
+.who__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .who__heading h2 {
   margin-top: 1rem;
 }
@@ -10,7 +16,7 @@
 
 .who__header-second li::before {
   content: "";
-  background-image: url("/img/list__img-green.webp");
+  background-image: url("../img/list__img-green.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -75,8 +81,15 @@
 }
 
 .award:hover {
-  transform: scale(1.05) rotate3d(1, 1, 1, 360deg);
+  transform: scale(1.2);
   filter: drop-shadow(0 0 15px rgb(26, 45, 219)) invert(5%);
+  margin: 1rem;
 }
 
+@include breakpoint-up(large) {
+  .who__awards {
+    margin: 8rem 0;
+    width: 80vw;
+  }
+}
 /*    End Slider-3    */

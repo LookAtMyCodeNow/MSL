@@ -1,17 +1,12 @@
 /*   Start Slider 1 */
 
 .what {
-  background-image: url("/img/what__background.webp");
+  background-image: url("../img/what__background.webp");
+  z-index: 2;
 }
 
 .what__img {
   max-width: 15vw;
-}
-
-.what__img-thick {
-  grid-column: 1 / 3;
-  grid-row: 1/ 3;
-  transform: scale(200%) translateX(20px);
 }
 
 .what__footers {
@@ -24,6 +19,7 @@
 .what__footer-item::after {
   content: "|";
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 /*  End Slider 2   */
